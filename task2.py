@@ -8,8 +8,6 @@ users = {}
 cs = {}
 
 def auth_user():
-    global users
-    global cs
     login = login_entry.get()
 
     if login in users:
@@ -18,11 +16,11 @@ def auth_user():
         cs[login] = uuid.uuid1().bytes
         users[login] = hashlib.sha256(cs[login] + password_entry.get().encode()).hexdigest()
         showinfo(title="Авторизация", message="Авторизация прошла успешно!")
+    login_entry.delete(0, END)
+    password_entry.delete(0, END)
 
 
 def login_user():
-    global users
-    global cs
     login = login_entry.get()
     password = password_entry.get()
 

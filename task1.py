@@ -24,7 +24,7 @@ root.geometry("400x200+250+50")
 root["bg"] = "#d6f9f1"
 
 root.columnconfigure(index=0, weight=1)
-root.columnconfigure(index=0, weight=1)
+root.columnconfigure(index=1, weight=1)
 root.rowconfigure(index=0, weight=1)
 root.rowconfigure(index=1, weight=1)
 
